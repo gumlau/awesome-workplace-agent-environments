@@ -1,0 +1,10 @@
+name,org,date,code_url,paper_url,data_url,kind,content,scale,privacy_or_generation,repo_license,license_note
+Enron（OpenPipe 整理版）,,—,,,https://huggingface.co/datasets/corbt/enron-emails,真实,安然员工邮件,10 万到 100 万条,监管调查时经法律程序公开,,数据页面未注明
+EnronQA,,2025-05,,https://arxiv.org/abs/2505.00263,https://huggingface.co/datasets/MichaelR207/enron_qa_0922,真实邮件，问答由 LLM 生成,清洗后的邮件加问答,"103,638 封，528,304 个问答","采用已应当事人请求删除部分记录的 2015 版本；经去重、质量、色情内容与毒性过滤，517,401 → 103,638 封",,CC BY 4.0（据论文）
+Avocado,LDC,2015,,,https://catalog.ldc.upenn.edu/LDC2015T03,真实,一家已停止运营的 IT 公司的邮件、附件与日历,279 个账号,通过协议限定使用范围，限制再分发,,需签 LDC 协议
+EnterpriseRAG-Bench,Onyx,2026-05,https://github.com/onyx-dot-app/EnterpriseRAG-Bench,https://arxiv.org/abs/2605.05253,https://huggingface.co/datasets/onyx-dot-app/EnterpriseRAG-Bench,合成,Slack、Gmail、Jira、Confluence 等 9 种来源,约 50 万份文档，500 个问题,围绕共享项目与人员生成，加入错置、近似重复和矛盾信息,MIT,MIT；生成框架开源
+HERB,Salesforce,2025-06,https://github.com/SalesforceAIResearch/HERB,https://arxiv.org/abs/2506.23139,https://huggingface.co/datasets/Salesforce/HERB,合成,文档、会议纪要、Slack 消息、代码仓库,"39,190 份",模拟产品规划到售后的流程，生成互相关联的内容,CC-BY-NC-4.0,CC BY-NC 4.0，禁商用
+OrgForge,,2026-03,https://github.com/tenurehq/orgforge,https://arxiv.org/abs/2603.14997,https://huggingface.co/datasets/aeriesec/orgforge,合成,Slack、JIRA、Confluence、邮件、工单等,1 万到 10 万条,确定性程序维护事件与时间线，LLM 生成文本；使用 MongoDB 管理状态,MIT,MIT
+Era by Eon,,2026-09,,https://arxiv.org/abs/2609.09853,,合成,一家虚构公司在 CRM、客服、聊天等系统里的全部数据,23 家公司,同一批实体投射到 66 个业务产品；用检测器找合成痕迹,,—
+WinSyn,,2026-09,,https://arxiv.org/abs/2609.12171,,合成,模拟数月项目的往来邮件,最多 25 个员工互动,刻意制造信息分散和前后矛盾,,—
+Vectrix ART-E,,—,,,https://huggingface.co/datasets/TonicAI/vectrix-art-e,合成,邮件语料，定位是 Enron 的替代品,1 千到 1 万条,—,,Apache-2.0

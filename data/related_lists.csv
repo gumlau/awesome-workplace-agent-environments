@@ -1,0 +1,9 @@
+repo,covers
+thinkwee/AgentsMeetRL,用 RL 训练 Agent 的开源仓库，按任务分 16 类，记录每个项目用的框架、算法、奖励和环境
+HHHHHejia/Awesome-AgenticLLM-RL-Papers,一篇 Agentic RL 综述的配套论文列表，含环境和框架两节
+ZackZikaiXiao/Awesome-Agent-Environments,按任务、构造与执行层组织 Agent 环境，涵盖企业工作流与个人助理
+TraceLite-AI/Awesome-Agentic-Environments,环境可复现性、沙盒基础设施、供给方与行业资料
+Amithuz/awesome-rl-environments,RL 环境供给方清单
+wasiahmad/Awesome-LLM-Synthetic-Data,用 LLM 合成数据的阅读清单
+trycua/acu,电脑操作类 Agent 的论文、项目、框架
+philschmid/ai-agent-benchmark-compendium,50 多个 Agent 评测，按工具调用、通用助理、编程等分类

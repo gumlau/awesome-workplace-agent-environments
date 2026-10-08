@@ -1,0 +1,16 @@
+name,org,date,code_url,paper_url,data_url,category,method,training_setup,reported_result,released,repo_license,license_note
+Corecraft,Surge AI,2026-02,,https://arxiv.org/abs/2602.16179,,训练实证,在高保真企业环境中进行 RL 训练,"GLM 4.6，GRPO，1,000 个任务，每个任务 16 条 rollout，1 个 epoch",留出任务 25.37% → 36.76%；三个外部评测 +4.5、+7.4、+6.8,未开放,,未公开
+EnterpriseLab,Fujitsu Research,2026-03,https://github.com/ast-fri/EnterpriseLab,https://arxiv.org/abs/2603.21630,,环境加训练,依据工具依赖关系合成轨迹，用于后续训练,"Qwen3-8B；SFT 不到 1,000 条约 2 小时；GRPO 用 4 张 H200 跑 24–30 小时",自家环境 0.31 → 0.43，GPT-4o 是 0.45,环境、任务生成管线、四种训练方法的代码,none,未发现许可文件
+ART（含邮件 Agent 示例）,OpenPipe,2025-04,https://github.com/OpenPipe/ART,,https://huggingface.co/datasets/corbt/enron-emails,训练框架,GRPO 训练库；邮件示例使用 Enron、SQLite 全文检索和三个工具，最多执行 10 步,Qwen 14B；每步 12 题各 4 条 rollout；1 张 H100 不到一天，约 80 美元,作者报告：邮件问答的准确率、延迟与成本优于 o3,框架、notebook、数据,Apache-2.0,Apache-2.0
+Agent World Model,Snowflake,2026-02,https://github.com/Snowflake-Labs/agent-world-model,https://arxiv.org/abs/2602.10090,https://huggingface.co/datasets/Snowflake/AgentWorldModel-1K,环境生成,依次生成场景、数据库结构、种子数据、工具与验证器；使用 SQLite 管理状态，通过 MCP 提供接口,多轮工具调用的大规模 RL,作者报告：仅在合成环境训练，在三个评测中实现分布外泛化,"管线、1,000 个环境、三个训好的模型",none,代码未发现许可文件；数据 CC BY 4.0
+EnvScaler,人大,2026-01,https://github.com/RUC-NLPIR/EnvScaler,https://arxiv.org/abs/2601.05808,,环境生成,先生成环境骨架，再生成场景和校验函数,Qwen3 的 1.7B、4B、8B；SFT 加 RL,三个评测上明显提升,191 个环境、SFT 和 RL 数据、训练代码、模型,MIT,MIT
+AgentScaler,阿里通义,2025-09,,https://arxiv.org/abs/2509.13311,,环境生成,自动构造全仿真的函数调用环境,两阶段微调：先通用能力，再垂直场景,τ-bench、τ²-Bench、ACEBench 上提升,—,,—
+Simia,Microsoft,2025-11,https://github.com/microsoft/Simia-Agent-Training,https://arxiv.org/abs/2511.01824,,LLM 模拟环境,以推理模型模拟环境反馈,开源模型，SFT 和 RL 两条管线,τ²-Bench 上超过 GPT-4o，接近 o4-mini,代码,MIT,MIT
+DreamGym,,2025-11,,https://arxiv.org/abs/2511.03773,,LLM 模拟环境,用一个经验模型合成 rollout，并自动出更难的任务,在线 RL,WebArena 上比基线高 30% 以上,未发现官方代码,,—
+APIGen-MT,Salesforce,2025-04,,https://arxiv.org/abs/2504.03601,,轨迹合成,先生成带标准动作的任务蓝图，再用模拟的人机对话展开成轨迹,xLAM-2 系列，1B 到 70B，SFT,τ-bench 和 BFCL 上超过 GPT-4o 和 Claude 3.5,—,,—
+Synthetic Computers at Scale,Microsoft,2026-04,,https://arxiv.org/abs/2604.28181,https://huggingface.co/datasets/microsoft/synthetic-computers-at-scale,经验提炼,"造 1,000 台合成电脑，每台模拟跑 8 小时以上；把经验提炼成技能文档",不更新权重；900 台用来提炼,自家评测 61.6% → 68.6%,100 台合成电脑,,MIT（数据）
+Agent Lightning,Microsoft,2026-08,https://github.com/microsoft/agent-lightning,https://arxiv.org/abs/2608.17528,,训练框架,让线上实际使用的 Agent 框架直接参与训练，训练器只看模型的请求和响应,"Qwen3.5-9B，6,000 条样本",SWE-bench Verified 41.8% → 56.4%,框架和完整示例,MIT,MIT
+ToolBrain,,2025-09,https://github.com/ToolBrain/ToolBrain,https://arxiv.org/abs/2510.00023,,训练框架,工具调用的 RL 框架，含邮件搜索 Agent 示例,—,—,代码,none,未发现许可文件
+OpenEnv,Hugging Face,—,https://github.com/huggingface/OpenEnv,,,基础设施,RL 后训练用的环境接口库,—,—,代码,BSD-3-Clause,BSD-3-Clause
+verifiers,Prime Intellect,—,https://github.com/PrimeIntellect-ai/verifiers,,,基础设施,RL 环境与评测库,—,—,代码,MIT,MIT
+Harbor,,—,https://github.com/harbor-framework/harbor,,,基础设施,任务格式和运行框架，UniPat 的 Monthly-SWEBench 用这个格式,—,—,代码,Apache-2.0,Apache-2.0

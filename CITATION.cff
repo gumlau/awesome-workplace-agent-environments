@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this collection, please cite it as below."
+title: "Awesome Workplace Agent Environments"
+abstract: >-
+  A curated collection of environments, benchmarks, training methods, and datasets
+  for workplace AI agents that work across email, messaging, calendars, documents,
+  and enterprise applications.
+authors:
+  - family-names: Liu
+    given-names: Gan
+    website: "https://ganliu.blog"
+repository-code: "https://github.com/gumlau/awesome-workplace-agent-environments"
+url: "https://gumlau.github.io/awesome-workplace-agent-environments/"
+date-released: 2026-10-08
+keywords:
+  - AI agents
+  - LLM agents
+  - RL environments
+  - agent benchmarks
+  - post-training
+  - synthetic data
+  - workplace agents
+  - enterprise AI

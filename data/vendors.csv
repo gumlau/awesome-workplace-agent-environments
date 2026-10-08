@@ -1,0 +1,6 @@
+name,founded,sells,data_source,openness,links
+Copula Lab,2026 年上半年，上海,专家制作的工作成果：研究报告与财务模型、并购尽调、前端应用、游戏及三维工程,付费专家网络，金融和法律专家兼职每月 2–3 万元；金融用上市公司公开披露，法律用封闭的模拟文档库,公开样例页面；生产数量与筛选淘汰率未披露,[官网](https://www.copulalab.com/) · [档案](docs/vendors/copula-lab.md)
+UniPat AI,2025 年底，北京,评测加训练数据，十条线：编程、科研、医疗金融法律、视觉、预测等；据报道还卖 RL 后训练数据,真实代码仓库、预测市场、网络图片、论文；LLM 合成后专家审核；高风险领域专家直接写,公开生产流程、筛选统计与多数数据集,[博客](https://unipat.ai/blog) · [GitHub](https://github.com/UniPat-AI) · [档案](docs/vendors/unipat-ai.md)
+Surge AI,—,EnterpriseBench 系列 RL 环境，第一个是 Corecraft,自有团队搭环境，领域专家写任务和评分标准,论文与榜单公开；环境未发布,[博客](https://www.surgehq.ai/blog/enterprisebench-corecraft) · [论文](https://arxiv.org/abs/2602.16179)
+智能知识,2026 年 6 月宣布天使轮,专家网络（一面千识）、数据生产软件（Xpert Studio）、RL 任务数据（Terminal RL Data、MCP Data）,公司自述：连接 5 万多名领域专家，通过 AI 面试筛选,有公开的产品介绍,[硅星人报道](https://finance.sina.cn/stock/jdts/2026-08-16/detail-ininnkfv8014751.d.html)
+Scale AI、Mercor、AfterQuery,—,据报道：Scale 近一半新训练项目涉及 RL 环境；Mercor 收购了环境搭建公司 Deeptune；AfterQuery 搭数字办公「世界」,—,—,[硅星人报道](https://www.163.com/dy/article/L7JI5DP20511N33R.html) · [Techmeme 条目](https://www.techmeme.com/260416/p46)

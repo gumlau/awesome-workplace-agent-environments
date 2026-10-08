@@ -1,0 +1,71 @@
+# GitHub Pages 站点配置：给搜索引擎和社交平台提供标题、描述、分享卡片和站点地图。
+# 页面内容仍然来自 README.md，这里不放正文。
+
+title: Awesome Workplace Agent Environments
+tagline: Environments, benchmarks, datasets, and RL training for workplace AI agents
+description: >-
+  A curated list of environments, benchmarks, datasets, and RL training resources
+  for workplace AI agents across email, chat, calendar, documents, and enterprise apps.
+url: https://gumlau.github.io
+baseurl: /awesome-workplace-agent-environments
+lang: en
+author:
+  name: Gan Liu
+  url: https://ganliu.blog
+
+# 社交卡片
+image: /assets/social-preview.png
+social:
+  name: Gan Liu
+  links:
+    - https://ganliu.blog
+    - https://github.com/gumlau
+
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# README 里的 <details> 包着 Markdown 表格，需要打开这个开关才会被渲染成表格
+kramdown:
+  parse_block_html: true
+
+# 中文页面单独设置语言、标题和描述
+defaults:
+  - scope:
+      path: "README.zh-CN.md"
+    values:
+      lang: zh-CN
+      title: 办公 Agent 环境、评测与数据集资源清单
+      description: >-
+        面向办公 Agent 的环境、评测、训练方法与数据集资源清单，
+        覆盖邮件、即时通讯、日历、文档与企业应用，含飞书相关工作。
+  - scope:
+      path: "docs"
+    values:
+      lang: zh-CN
+  - scope:
+      path: "docs/survey.md"
+    values:
+      title: 面向办公场景的 Agent 后训练：数据供给、仿真环境与隐私处理综述
+      description: >-
+        办公场景 Agent 后训练的综述：谁在供给数据、仿真环境怎么搭、在环境里训练是否有效、
+        带隐私的真实办公数据怎样处理。
+  - scope:
+      path: "docs/vendors/copula-lab.md"
+    values:
+      title: Copula Lab 档案：数据产品、获取方式与清洗流程
+      description: Copula Lab 的数据产品、专家网络、数据获取方式、清洗与质检流程，以及未能证实的说法。
+  - scope:
+      path: "docs/vendors/unipat-ai.md"
+    values:
+      title: UniPat AI 档案：数据线、来源与清洗机制
+      description: UniPat AI 的十条数据线、五类数据来源、四类清洗机制和公开的筛选漏斗。
+  - scope:
+      path: "CONTRIBUTING.zh-CN.md"
+    values:
+      lang: zh-CN
+
+exclude:
+  - scripts
+  - CITATION.cff
