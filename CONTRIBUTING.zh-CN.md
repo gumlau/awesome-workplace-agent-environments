@@ -21,16 +21,16 @@
 
 ## 更新流程
 
-README 的表格区块由脚本生成。请修改 CSV 记录，不要直接修改生成的表格。
+README 的表格区块由脚本生成。请修改 CSV 记录，不要直接修改生成的表格。链接徽章、分类 emoji 和标题下方的数量徽章同样由脚本生成；新增分类需要 emoji 时，在 `scripts/build_readme.py` 的 `ICONS` 中补充。
 
 1. 在对应的 `data/*.csv` 文件中新增或更新记录。
 2. 同步修改 `data/en/*.csv` 中的对应行。两个版本保持相同顺序、字段、链接、日期和 `repo_license` 值；翻译描述，并酌情解释国际读者不熟悉的本地产品名称。
 3. 运行 `python3 scripts/build_readme.py`，重新生成两个 README。
 4. 运行 `python3 scripts/build_readme.py --check`，检查翻译对应关系与生成表格。
 5. 论文引用有变化时，运行 `python3 scripts/make_bib.py`，从 arXiv 更新 `data/papers.bib`。
-6. 运行 `python3 scripts/verify.py`，核对仓库元数据与 arXiv 标识。该步骤需要网络，优先使用 `gh`，否则使用 `curl`。
+6. 运行 `python3 scripts/verify.py`，核对仓库元数据与 arXiv 标识。该步骤需要网络，优先使用 `gh`，否则使用 `curl`。它同时会更新 `data/stars.json` 中的 Star 数快照；之后重新执行第 3 步，Star 徽章才会显示新数值。
 
-介绍文字或章节结构有变化时，直接修改 `README.md` 与 `README.zh-CN.md` 中生成标记以外的内容。`<details>` 内容前后保留空行，确保 GitHub 正确渲染 Markdown 表格。
+介绍文字或章节结构有变化时，直接修改 `README.md` 与 `README.zh-CN.md` 中生成标记以外的内容。`<details>` 内容前后保留空行，确保 GitHub 正确渲染 Markdown 表格。各节标题带有显式的 `<a id>` 锚点，导航行的链接指向这些锚点；修改标题时请保留。
 
 ## 数据字段
 

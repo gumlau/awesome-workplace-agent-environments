@@ -21,16 +21,16 @@ For resources focused solely on coding, general web browsing, or robotics, consi
 
 ## Update workflow
 
-README table blocks are generated. Edit the CSV records rather than the generated tables.
+README table blocks are generated. Edit the CSV records rather than the generated tables. Link badges, category emoji, and the count badges under the title are generated as well; to give a new category an emoji, add it to `ICONS` in `scripts/build_readme.py`.
 
 1. Add or update a record in the appropriate `data/*.csv` file.
 2. Update the matching row in `data/en/*.csv`. Keep the same row order, schema, URLs, dates, and `repo_license` values. Translate descriptions and explain unfamiliar local product names where useful.
 3. Run `python3 scripts/build_readme.py` to regenerate both README versions.
 4. Run `python3 scripts/build_readme.py --check` to check translation alignment and generated tables.
 5. If paper references change, run `python3 scripts/make_bib.py` to refresh `data/papers.bib` from arXiv.
-6. Run `python3 scripts/verify.py` to check repository metadata and arXiv identifiers. This requires network access and uses `gh` when available, otherwise `curl`.
+6. Run `python3 scripts/verify.py` to check repository metadata and arXiv identifiers. This requires network access and uses `gh` when available, otherwise `curl`. It also refreshes the star-count snapshot in `data/stars.json`; rerun step 3 afterwards so the star badges show the new counts.
 
-When editing introductory text or section structure, update both `README.md` and `README.zh-CN.md` directly, outside generated markers. Keep `<details>` content separated by blank lines so GitHub renders the Markdown tables.
+When editing introductory text or section structure, update both `README.md` and `README.zh-CN.md` directly, outside generated markers. Keep `<details>` content separated by blank lines so GitHub renders the Markdown tables. Section headings carry explicit `<a id>` anchors that the navigation line links to; keep them when renaming a heading.
 
 ## Record schema
 

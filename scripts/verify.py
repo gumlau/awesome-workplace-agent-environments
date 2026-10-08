@@ -3,6 +3,7 @@
 
 - GitHub 仓库：是否还在、是否归档、许可是否和表里一致、星数、最近更新。
 - arXiv 论文：编号是否存在，顺带打印标题。
+- 把查到的星数写进 data/stars.json，README 里的星数徽章用的是这份快照。
 
 用法：python3 scripts/verify.py
 需要：curl。装了并登录了 gh 的话会优先用它（未登录的 GitHub API 每小时只有 60 次）。
@@ -65,6 +66,7 @@ def main() -> int:
             rows.append({"name": r["repo"], "code_url": f"https://github.com/{r['repo']}",
                          "paper_url": "", "repo_license": ""})
     problems = 0
+    stars: dict[str, int] = {}
 
     print("== GitHub 仓库 ==")
     for row in rows:
@@ -76,6 +78,7 @@ def main() -> int:
             print(f"[缺失] {row['name']}: {row['code_url']}")
             problems += 1
             continue
+        stars[m.group(1)] = repo["stargazers_count"]
         spdx = (repo.get("license") or {}).get("spdx_id") or "none"
         flags = []
         if repo.get("archived"):
@@ -90,6 +93,13 @@ def main() -> int:
             problems += 1
         print(f"{'[注意]' if flags else '[正常]'} {row['name']}: ★{repo['stargazers_count']} "
               f"{spdx} 更新于 {repo['pushed_at'][:10]} {'；'.join(flags)}")
+
+    if stars:
+        # 没查到的仓库保留上一次的星数
+        path = ROOT / "data" / "stars.json"
+        old = json.loads(path.read_text(encoding="utf-8"))["stars"] if path.exists() else {}
+        snapshot = {"updated": time.strftime("%Y-%m-%d"), "stars": dict(sorted({**old, **stars}.items()))}
+        path.write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
 
     print("\n== arXiv 论文 ==")
     ids = {}
