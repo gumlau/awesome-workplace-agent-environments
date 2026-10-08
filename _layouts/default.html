@@ -20,7 +20,26 @@
       <p><a href="{{ "/" | relative_url }}">&larr; {{ site.title }}</a></p>
       {%- endif %}
 
-      {{ content }}
+      {%- comment -%}
+        站点不收录 scripts/ 和目录页，英文贡献指南也不会被渲染成页面。
+        把指向它们的相对链接改到 GitHub，避免站点上出现死链。
+      {%- endcomment -%}
+      {%- assign blob = site.github.repository_url | append: "/blob/main/" -%}
+      {%- assign tree = site.github.repository_url | append: "/tree/main/" -%}
+      {%- assign contributing_raw = "/CONTRIBUTING.md" | relative_url | prepend: 'href="' | append: '"' -%}
+      {%- assign contributing_zh = "/CONTRIBUTING.zh-CN.html" | relative_url | prepend: 'href="' | append: '"' %}
+
+      {{ content
+        | replace: 'href="scripts/', 'href="__BLOB__scripts/'
+        | replace: 'href="data/"', 'href="__TREE__data"'
+        | replace: 'href="data/en/"', 'href="__TREE__data/en"'
+        | replace: 'href="../data/"', 'href="__TREE__data"'
+        | replace: 'href="docs/vendors/"', 'href="__TREE__docs/vendors"'
+        | replace: 'href="CONTRIBUTING.md"', 'href="__BLOB__CONTRIBUTING.md"'
+        | replace: contributing_raw, 'href="__BLOB__CONTRIBUTING.md"'
+        | replace: 'href="CONTRIBUTING.zh-CN.md"', contributing_zh
+        | replace: '__BLOB__', blob
+        | replace: '__TREE__', tree }}
 
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
         <a href="{{ site.github.repository_url }}">View on GitHub</a> &middot; <a href="{{ site.author.url }}">{{ site.author.name }}</a>
