@@ -3,7 +3,7 @@
 [English](README.md) | **简体中文**
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![GitHub Star 数](https://img.shields.io/github/stars/gumlau/awesome-workplace-agent-environments?style=flat&logo=github)](https://github.com/gumlau/awesome-workplace-agent-environments/stargazers)
+[![GitHub Star 数](https://img.shields.io/github/stars/gumlau/awesome-workplace-agent-environments?style=flat&logo=github)](https://github.com/gumlau/awesome-workplace-agent-environments)
 [![最近更新](https://img.shields.io/github/last-commit/gumlau/awesome-workplace-agent-environments?style=flat)](https://github.com/gumlau/awesome-workplace-agent-environments/commits/main)
 [![欢迎提交 PR](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.zh-CN.md)
 [![站点](https://img.shields.io/badge/website-gumlau.github.io-0a7ea4)](https://gumlau.github.io/awesome-workplace-agent-environments/README.zh-CN.html)
