@@ -13,8 +13,7 @@ author:
   name: Gan Liu
   url: https://ganliu.blog
 
-# 社交卡片
-image: /assets/social-preview.png
+# 作者和社交资料（卡片图在下面的 defaults 里设置）
 social:
   name: Gan Liu
   links:
@@ -26,12 +25,19 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# README 里的 <details> 包着 Markdown 表格，需要打开这个开关才会被渲染成表格
-kramdown:
-  parse_block_html: true
+# 用和 github.com 一致的解析器，表格、<br> 和 <details> 才会和仓库页渲染得一样
+markdown: GFM
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 # 中文页面单独设置语言、标题和描述
 defaults:
+  # 所有页面共用同一张分享卡片
+  - scope:
+      path: ""
+    values:
+      image: /assets/social-preview.png
   - scope:
       path: "README.zh-CN.md"
     values:

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    {%- comment -%} 中英两版清单互相声明为对方的语言版本 {%- endcomment -%}
+    {%- if page.path == "README.md" or page.path == "README.zh-CN.md" %}
+    <link rel="alternate" hreflang="en" href="{{ "/" | absolute_url }}">
+    <link rel="alternate" hreflang="zh-CN" href="{{ "/README.zh-CN.html" | absolute_url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ "/" | absolute_url }}">
+    {%- endif %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      {%- if page.url != "/" %}
+      <p><a href="{{ "/" | relative_url }}">&larr; {{ site.title }}</a></p>
+      {%- endif %}
+
+      {{ content }}
+
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        <a href="{{ site.github.repository_url }}">View on GitHub</a> &middot; <a href="{{ site.author.url }}">{{ site.author.name }}</a>
+      </div>
+    </div>
+  </body>
+</html>
