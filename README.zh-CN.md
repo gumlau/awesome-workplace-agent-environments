@@ -9,18 +9,18 @@
 [![站点](https://img.shields.io/badge/website-gumlau.github.io-0a7ea4)](https://gumlau.github.io/awesome-workplace-agent-environments/README.zh-CN.html)
 
 <!-- BEGIN:stats -->
-[![环境](https://img.shields.io/badge/%E7%8E%AF%E5%A2%83-20-1f6feb)](#environments)
+[![环境](https://img.shields.io/badge/%E7%8E%AF%E5%A2%83-21-1f6feb)](#environments)
 [![生成与训练](https://img.shields.io/badge/%E7%94%9F%E6%88%90%E4%B8%8E%E8%AE%AD%E7%BB%83-15-8250df)](#training)
 [![数据集](https://img.shields.io/badge/%E6%95%B0%E6%8D%AE%E9%9B%86-9-1a7f37)](#datasets)
 [![供给方](https://img.shields.io/badge/%E4%BE%9B%E7%BB%99%E6%96%B9-5-9a6700)](#providers)
-[![论文](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-41-b31b1b)](data/papers.bib)
+[![论文](https://img.shields.io/badge/%E8%AE%BA%E6%96%87-42-b31b1b)](data/papers.bib)
 <!-- END:stats -->
 
 > 面向办公 Agent 的环境、评测、训练方法与数据集资源清单。
 
 聚焦邮件、即时通讯、日历、文档与企业应用中的 Agent 任务，汇总任务范围、数据来源、评测方法、状态后端和开放条件，为环境选型与后训练研究提供参考。
 
-📅 **调研快照：2026-10-08。** 当前收录 20 个环境、15 项生成与训练资源、9 个数据集和 5 条供给方资料。部分资源在不同类别中重复出现。
+📅 **调研快照：2026-10-08；EC²-Bench 补充于 2026-11-11。** 当前收录 21 个环境、15 项生成与训练资源、9 个数据集和 5 条供给方资料。部分资源在不同类别中重复出现。
 
 [🚀 快速导航](#quickstart) · [🌐 环境与评测](#environments) · [⚙️ 环境生成与训练](#training) · [🗂️ 数据集与隐私](#datasets) · [🏭 供给方](#providers) · [🔗 相关清单](#related) · [🤝 参与贡献](CONTRIBUTING.zh-CN.md)
 
@@ -68,6 +68,7 @@
 | **AppWorld**<br>Stony Brook · 2024-07<br>[![代码](https://img.shields.io/badge/stars-529-007ec6?logo=github&logoColor=white)](https://github.com/StonyBrookNLP/appworld) [![论文](https://img.shields.io/badge/arXiv-2407.18901-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.18901) | 🖥️ 个人与桌面 | 购物、音乐、支付、笔记、消息等 9 个 | Apache-2.0；提供 MCP 服务端与数据生成指南 |
 | **MyPCBench**<br>CMU · 2026-06<br>[![代码](https://img.shields.io/badge/stars-9-007ec6?logo=github&logoColor=white)](https://github.com/ljang0/MyPCBench) [![论文](https://img.shields.io/badge/arXiv-2606.16748-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16748) [![数据](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/ljang0/mypcbench-qemu-baseline) | 🖥️ 个人与桌面 | 邮件、聊天、日历、银行、购物、打车等 17 个网站加桌面 | MIT；数据修改能力尚未验证 |
 | **Workspace-Bench**<br>2026-05<br>[![代码](https://img.shields.io/badge/stars-78-007ec6?logo=github&logoColor=white)](https://github.com/OpenDataBox/Workspace-Bench) [![论文](https://img.shields.io/badge/arXiv-2605.03596-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.03596) [![数据](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/Workspace-Bench) | 🖥️ 个人与桌面 | 文件系统，含邮件和会议纪要文件 | MIT；提供中文版本 |
+| **EC²-Bench (EC2-Bench)**<br>2026-10<br>[![代码](https://img.shields.io/badge/stars-22-007ec6?logo=github&logoColor=white)](https://github.com/OpenBMB/EC2-Bench) [![论文](https://img.shields.io/badge/arXiv-2610.17816-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.17816) [![数据](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/chengpingan/EC2-Bench) | 🖥️ 个人/桌面 | 数字工作空间：办公、信息搜索、安全、开发、数据分析和自动化 | 代码 MIT；Hugging Face 提供任务工作空间与容器镜像 |
 | **EnterpriseClawBench**<br>FrontisAI · 2026-06<br>[![代码](https://img.shields.io/badge/stars-49-007ec6?logo=github&logoColor=white)](https://github.com/FrontisAI/EnterpriseClawBench) [![论文](https://img.shields.io/badge/arXiv-2606.23654-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23654) | 🔁 真实会话 | 企业协作平台里的 Agent 任务，产出文档、表格、网页等 | 未发现许可文件；公开构造管线与一条脱敏样例，完整数据未公开 |
 | **DuMateBench**<br>2026-08<br>[![官网](https://img.shields.io/badge/website-dumatebench.com-0a7ea4)](https://dumatebench.com/) [![论文](https://img.shields.io/badge/arXiv-2608.26546-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.26546) | 🔁 真实会话 | 文档、表格、演示、检索、编程 | 数据已发布；许可参见官网 |
 <!-- END:environments -->
@@ -98,6 +99,7 @@
 | **AppWorld** | 457 个接口，750 个任务<br>全合成，约 100 个虚构用户 | 检查数据库状态 | SQLite，每应用一库 |
 | **MyPCBench** | 184 个任务<br>合成，全部按一个人设生成并互相关联 | 评分标准<br>55.4% | 整机镜像 |
 | **Workspace-Bench** | 388 个任务，20,476 个文件<br>任务场景来自字节内部**飞书**的 154 个真实工作流；文件是公开材料加合成 | Agent 评审逐条判 7,399 条评分标准<br>约 60%，人是 80.7% | 文件系统 |
+| **EC²-Bench (EC2-Bench)** | 128 个可执行任务；100 个有隐私标注<br>改编已有可执行 Agent 评测任务并补充整理场景 | 联合评测任务表现、云端成本与隐私暴露 | 独立 Docker 容器、工作空间文件和 mock 服务 |
 | **EnterpriseClawBench** | 852 个任务，从 5,291 个里筛出<br>**真实会话**，内部实体、链接、编号、金额全部打码 | 硬规则加文本和视觉评审<br>0.663（满分 1） | 文件加沙盒 |
 | **DuMateBench** | 200 个任务<br>**真实会话**，去掉个人信息和凭证后人工逐条复查 | 检查项占三成，LLM 评审占七成 | Docker 加工作区文件 |
 <!-- END:environment_details -->

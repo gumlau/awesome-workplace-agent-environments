@@ -9,18 +9,18 @@
 [![Website](https://img.shields.io/badge/website-gumlau.github.io-0a7ea4)](https://gumlau.github.io/awesome-workplace-agent-environments/)
 
 <!-- BEGIN:stats -->
-[![environments](https://img.shields.io/badge/environments-20-1f6feb)](#environments)
+[![environments](https://img.shields.io/badge/environments-21-1f6feb)](#environments)
 [![generation & training](https://img.shields.io/badge/generation%20%26%20training-15-8250df)](#training)
 [![datasets](https://img.shields.io/badge/datasets-9-1a7f37)](#datasets)
 [![providers](https://img.shields.io/badge/providers-5-9a6700)](#providers)
-[![papers](https://img.shields.io/badge/papers-41-b31b1b)](data/papers.bib)
+[![papers](https://img.shields.io/badge/papers-42-b31b1b)](data/papers.bib)
 <!-- END:stats -->
 
 > A curated collection of environments, benchmarks, training methods, and datasets for workplace agents.
 
 Explore agents that work across email, messaging, calendars, documents, and enterprise applications. This collection brings together task coverage, data provenance, evaluation methods, state backends, and release terms to support environment selection and post-training research.
 
-📅 **Research snapshot: 2026-10-08.** The collection currently includes 20 environments, 15 generation and training resources, 9 datasets, and 5 provider entries. Some resources appear in more than one category.
+📅 **Research snapshot: 2026-10-08; EC²-Bench added: 2026-11-11.** The collection currently includes 21 environments, 15 generation and training resources, 9 datasets, and 5 provider entries. Some resources appear in more than one category.
 
 [🚀 Quick start](#quickstart) · [🌐 Environments](#environments) · [⚙️ Generation & training](#training) · [🗂️ Datasets](#datasets) · [🏭 Providers](#providers) · [🔗 Related collections](#related) · [🤝 Contributing](CONTRIBUTING.md)
 
@@ -68,6 +68,7 @@ Four categories organize the collection: communication, enterprise applications,
 | **AppWorld**<br>Stony Brook · 2024-07<br>[![Code](https://img.shields.io/badge/stars-529-007ec6?logo=github&logoColor=white)](https://github.com/StonyBrookNLP/appworld) [![Paper](https://img.shields.io/badge/arXiv-2407.18901-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.18901) | 🖥️ Personal / desktop | 9 apps: shopping, music, payments, notes, messaging, etc. | Apache-2.0; MCP server and data-generation guide |
 | **MyPCBench**<br>CMU · 2026-06<br>[![Code](https://img.shields.io/badge/stars-9-007ec6?logo=github&logoColor=white)](https://github.com/ljang0/MyPCBench) [![Paper](https://img.shields.io/badge/arXiv-2606.16748-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.16748) [![Data](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/ljang0/mypcbench-qemu-baseline) | 🖥️ Personal / desktop | Desktop and 17 sites: email, chat, calendar, banking, shopping, rides, etc. | MIT; data-modification support not verified |
 | **Workspace-Bench**<br>2026-05<br>[![Code](https://img.shields.io/badge/stars-78-007ec6?logo=github&logoColor=white)](https://github.com/OpenDataBox/Workspace-Bench) [![Paper](https://img.shields.io/badge/arXiv-2605.03596-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2605.03596) [![Data](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/Workspace-Bench) | 🖥️ Personal / desktop | Filesystem with email and meeting-note files | MIT; Chinese version available |
+| **EC²-Bench (EC2-Bench)**<br>2026-10<br>[![Code](https://img.shields.io/badge/stars-22-007ec6?logo=github&logoColor=white)](https://github.com/OpenBMB/EC2-Bench) [![Paper](https://img.shields.io/badge/arXiv-2610.17816-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2610.17816) [![Data](https://img.shields.io/badge/data-Hugging%20Face-ffd21e?logo=huggingface&logoColor=white)](https://huggingface.co/datasets/chengpingan/EC2-Bench) | 🖥️ Personal / desktop | Digital-workspace tasks: office work, information search, safety, development, data analysis, and automation | Code: MIT; task workspaces and container image available on Hugging Face |
 | **EnterpriseClawBench**<br>FrontisAI · 2026-06<br>[![Code](https://img.shields.io/badge/stars-49-007ec6?logo=github&logoColor=white)](https://github.com/FrontisAI/EnterpriseClawBench) [![Paper](https://img.shields.io/badge/arXiv-2606.23654-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2606.23654) | 🔁 Real-session reconstruction | Enterprise assistant tasks producing documents, spreadsheets, web pages, etc. | No license file identified; pipeline and one sanitized example released, full data withheld |
 | **DuMateBench**<br>2026-08<br>[![Website](https://img.shields.io/badge/website-dumatebench.com-0a7ea4)](https://dumatebench.com/) [![Paper](https://img.shields.io/badge/arXiv-2608.26546-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2608.26546) | 🔁 Real-session reconstruction | Documents, spreadsheets, slides, retrieval, coding | Data released; see website for license |
 <!-- END:environments -->
@@ -98,6 +99,7 @@ Reported scores refer to the source publication's evaluation setup. They are pro
 | **AppWorld** | 457 APIs; 750 tasks<br>Fully synthetic; approx. 100 fictional users | Database-state checks | SQLite, one database per app |
 | **MyPCBench** | 184 tasks<br>Synthetic, linked data for a shared persona | Rubrics<br>55.4% | Full VM image |
 | **Workspace-Bench** | 388 tasks; 20,476 files<br>154 real internal Feishu workflows at ByteDance; public and synthetic files | Agent review of 7,399 rubric items<br>Approx. 60%; human: 80.7% | Filesystem |
+| **EC²-Bench (EC2-Bench)** | 128 executable tasks; 100 with privacy annotations<br>Tasks adapted from existing executable agent benchmarks and curated scenarios | Task performance, cloud cost, and privacy exposure measured jointly | Isolated Docker containers with workspace files and mock services |
 | **EnterpriseClawBench** | 852 tasks selected from 5,291<br>Real sessions; internal entities, links, IDs, and amounts masked | Hard rules, text review, and visual review<br>0.663 / 1 | Files and sandbox |
 | **DuMateBench** | 200 tasks<br>Real sessions; personal information and credentials removed, followed by manual review | 30% checklist; 70% LLM review | Docker and workspace files |
 <!-- END:environment_details -->

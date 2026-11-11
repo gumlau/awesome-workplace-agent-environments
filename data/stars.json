@@ -1,9 +1,10 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-11-11",
   "stars": {
     "Amithuz/awesome-rl-environments": 0,
     "FrontisAI/EnterpriseClawBench": 49,
     "HHHHHejia/Awesome-AgenticLLM-RL-Papers": 1906,
+    "OpenBMB/EC2-Bench": 22,
     "OpenDataBox/Workspace-Bench": 78,
     "OpenPipe/ART": 10788,
     "PrimeIntellect-ai/verifiers": 4683,
